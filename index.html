@@ -12,15 +12,299 @@
 
 <style>
 
-body{font-family:Arial,sans-serif;margin:0;background:#faf8f2;color:#333;}
+*{
 
-.hero{background:#c8a03a;color:#fff;padding:60px 20px;text-align:center;}
+margin:0;
 
-.container{max-width:900px;margin:auto;padding:40px 20px;}
+padding:0;
 
-.btn{display:inline-block;background:#2e7d32;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;}
+box-sizing:border-box;
 
-footer{text-align:center;padding:20px;color:#666;}
+}
+
+body{
+
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+
+background:#f8f7f3;
+
+color:#222;
+
+line-height:1.6;
+
+}
+
+/* 顶部 */
+
+header{
+
+background:linear-gradient(135deg,#0d4a35,#c8a03a);
+
+color:white;
+
+text-align:center;
+
+padding:60px 20px;
+
+}
+
+.logo{
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:4px solid #d4af37;
+
+box-shadow:0 12px 35px rgba(0,0,0,.35);
+
+margin-bottom:25px;
+
+background:white;
+
+}
+
+header h1{
+
+font-size:40px;
+
+font-weight:700;
+
+margin-bottom:12px;
+
+}
+
+header p{
+
+font-size:18px;
+
+opacity:.95;
+
+}
+
+.hero-btn{
+
+display:inline-block;
+
+margin-top:28px;
+
+padding:14px 34px;
+
+background:white;
+
+color:#8a6822;
+
+text-decoration:none;
+
+font-weight:bold;
+
+border-radius:999px;
+
+transition:.3s;
+
+}
+
+.hero-btn:hover{
+
+transform:translateY(-2px);
+
+}
+
+/* 内容 */
+
+.container{
+
+max-width:1000px;
+
+margin:auto;
+
+padding:50px 20px;
+
+}
+
+.section-title{
+
+font-size:32px;
+
+color:#8a6822;
+
+margin-bottom:18px;
+
+}
+
+.story{
+
+font-size:18px;
+
+color:#444;
+
+margin-bottom:45px;
+
+}
+
+/* 产品 */
+
+.products{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:22px;
+
+margin-top:25px;
+
+}
+
+.card{
+
+background:white;
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:0 8px 24px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-6px);
+
+}
+
+.card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+}
+
+.card h3{
+
+padding:15px;
+
+font-size:22px;
+
+}
+
+.card p{
+
+padding:0 15px 20px;
+
+color:#666;
+
+}
+
+/* 优势 */
+
+.why{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:18px;
+
+margin-top:25px;
+
+}
+
+.why-box{
+
+background:white;
+
+padding:24px;
+
+border-radius:16px;
+
+text-align:center;
+
+box-shadow:0 6px 18px rgba(0,0,0,.06);
+
+}
+
+.why-box div{
+
+font-size:40px;
+
+}
+
+.why-box h4{
+
+margin:10px 0;
+
+color:#8a6822;
+
+}
+
+/* 联系 */
+
+.contact{
+
+background:#163324;
+
+color:white;
+
+padding:55px 20px;
+
+text-align:center;
+
+}
+
+.contact h2{
+
+font-size:30px;
+
+margin-bottom:15px;
+
+}
+
+.whatsapp{
+
+display:inline-block;
+
+margin-top:25px;
+
+padding:15px 34px;
+
+background:#25D366;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:bold;
+
+border-radius:999px;
+
+}
+
+/* 页脚 */
+
+footer{
+
+background:#111;
+
+color:#aaa;
+
+padding:20px;
+
+text-align:center;
+
+font-size:14px;
+
+}
 
 </style>
 
@@ -28,25 +312,143 @@ footer{text-align:center;padding:20px;color:#666;}
 
 <body>
 
-<div class="hero">
+<header>
+
+<img src="logo.jpeg" alt="Kiwi Golden Select NZ" class="logo">
 
 <h1>Kiwi Golden Select NZ</h1>
 
-<p>Premium New Zealand Selection</p>
+<p>New Zealand Original Selection</p>
 
-</div>
+<p style="margin-top:8px;">新西兰原产地直邮</p>
+
+<a class="hero-btn" href="#products">Shop Collection</a>
+
+</header>
 
 <div class="container">
 
-<h2>Welcome</h2>
+<h2 class="section-title">Our Story</h2>
 
-<p>Authentic New Zealand products carefully selected for quality and trust.</p>
+<p class="story">
 
-<p><a class="btn" href="#">Coming Soon</a></p>
+We carefully select authentic premium New Zealand products, bringing trusted quality and elegant gifting experiences to customers worldwide.
+
+</p>
+
+<p class="story">
+
+我们精选新西兰原产优质产品，坚持品质与信任，为全球顾客提供值得信赖的购物体验。
+
+</p>
+
+<h2 class="section-title" id="products">Featured Collections</h2>
+
+<div class="products">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=600&q=80" alt="Manuka Honey">
+
+<h3>Manuka Honey</h3>
+
+<p>Premium UMF certified New Zealand Manuka Honey.</p>
 
 </div>
 
-<footer>© 2026 Kiwi Golden Select NZ</footer>
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=600&q=80" alt="Gift Sets">
+
+<h3>Royal Gift Sets</h3>
+
+<p>Elegant premium gifting for family and business.</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=600&q=80" alt="Wellness">
+
+<h3>Natural Wellness</h3>
+
+<p>Carefully selected New Zealand wellness products.</p>
+
+</div>
+
+</div>
+
+<h2 class="section-title" style="margin-top:60px;">Why Choose Us</h2>
+
+<div class="why">
+
+<div class="why-box">
+
+<div>🇳🇿</div>
+
+<h4>New Zealand</h4>
+
+<p>Authentic local products</p>
+
+</div>
+
+<div class="why-box">
+
+<div>✨</div>
+
+<h4>Premium Quality</h4>
+
+<p>Carefully selected</p>
+
+</div>
+
+<div class="why-box">
+
+<div>🎁</div>
+
+<h4>Elegant Gifts</h4>
+
+<p>Beautiful presentation</p>
+
+</div>
+
+<div class="why-box">
+
+<div>🤝</div>
+
+<h4>Trusted Service</h4>
+
+<p>Friendly support</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="contact">
+
+<h2>Contact Us</h2>
+
+<p>Kiwi Golden Select NZ</p>
+
+<p>New Zealand Original Selection</p>
+
+<p>新西兰原产地直邮</p>
+
+<a class="whatsapp" href="https://wa.me/" target="_blank">
+
+WhatsApp Us
+
+</a>
+
+</div>
+
+<footer>
+
+© 2026 Kiwi Golden Select NZ. All Rights Reserved.
+
+</footer>
 
 </body>
 
